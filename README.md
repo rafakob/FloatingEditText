@@ -60,8 +60,8 @@ You can write this:
 | `EditText getEditText()` | Return the `EditText` which is annotated with `@NonNull` |
 
 ## Install
-[ ![Download](null/packages/rafakob/FloatingEditText/FloatingEditText/images/download.svg?version=1.0.0) ](https://bintray.com/rafakob/FloatingEditText/FloatingEditText/1.0.0/link)
+[ ![Download](https://api.bintray.com/packages/rafakob/maven/FloatingEditText/images/download.svg) ](https://bintray.com/rafakob/maven/FloatingEditText/_latestVersion)
 
 ```java
-compile 'com.rafakob:FloatingEditText:version'
+compile 'com.rafakob:floatingedittext:latest_version'
 ```
