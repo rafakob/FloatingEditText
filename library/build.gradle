@@ -1,17 +1,42 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'FloatingEditText'
+    bintrayName = 'FloatingEditText'
+
+    publishedGroupId = 'com.rafakob'
+    libraryName = 'FloatingEditText'
+    artifact = 'FloatingEditText'
+
+    libraryDescription = 'TextInputLayout and TextInputEditText merged into one class'
+
+    siteUrl = 'https://github.com/rafakob/FloatingEditText'
+    gitUrl = 'https://github.com/rafakob/FloatingEditText'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'rafakob'
+    developerName = 'Rafał Kobyłko'
+    developerEmail = 'rafakob@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
 
     defaultConfig {
+        def verMajor = 1
+        def verMinor = 0
+        def verPatch = 0
+
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        versionCode verMajor * 100000 + verMinor * 100 + verPatch
+        versionName "${verMajor}.${verMinor}.${verPatch}"
     }
     buildTypes {
         release {
@@ -24,3 +49,6 @@ android {
 dependencies {
     compile 'com.android.support:design:25.3.1'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
