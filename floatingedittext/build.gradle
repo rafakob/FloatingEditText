@@ -1,43 +1,17 @@
 apply plugin: 'com.android.library'
-
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'FloatingEditText'
-
-    publishedGroupId = 'com.rafakob'
-    libraryName = 'FloatingEditText'
-    artifact = 'floatingedittext'
-
-    libraryDescription = 'TextInputLayout and TextInputEditText merged into one class'
-
-    siteUrl = 'https://github.com/rafakob/FloatingEditText'
-    gitUrl = 'https://github.com/rafakob/FloatingEditText'
-
-    libraryVersion = '1.0.2'
-
-    developerId = 'rafakob'
-    developerName = 'Rafał Kobyłko'
-    developerEmail = 'rafakob@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        def verMajor = 1
-        def verMinor = 0
-        def verPatch = 2
-
         minSdkVersion 19
         targetSdkVersion 25
         versionCode verMajor * 100000 + verMinor * 100 + verPatch
         versionName "${verMajor}.${verMinor}.${verPatch}"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -50,5 +24,18 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
 }
 
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+publish {
+    artifactId = bintray.artifactId
+    uploadName = bintray.uploadName
+
+    publishVersion = bintray.publishVersion
+    repoName = bintray.repoName
+    groupId = bintray.groupId
+    desc = bintray.desc
+    website = bintray.website
+    repository = bintray.repository
+    licences = bintray.licences
+    dryRun = bintray.dryRun
+    bintrayUser = bintray.user
+    bintrayKey = bintray.key
+}
