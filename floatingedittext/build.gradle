@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/rafakob/FloatingEditText'
     gitUrl = 'https://github.com/rafakob/FloatingEditText'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'rafakob'
     developerName = 'Rafał Kobyłko'
@@ -31,7 +31,7 @@ android {
     defaultConfig {
         def verMajor = 1
         def verMinor = 0
-        def verPatch = 0
+        def verPatch = 1
 
         minSdkVersion 19
         targetSdkVersion 25
