@@ -17,4 +17,8 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+    <style name="HintTextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ff0000</item>
+    </style>
 </resources>
