@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FloatingEditText">
+        <attr name="android:text"/>
+        <attr name="android:textAllCaps"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="android:textStyle"/>
+        <attr name="android:fontFamily"/>
+        <attr name="android:inputType"/>
+        <attr name="android:imeOptions"/>
+        <attr name="android:maxLength"/>
+        <attr name="android:maxLines"/>
+    </declare-styleable>
+</resources>
