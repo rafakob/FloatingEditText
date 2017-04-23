@@ -4,7 +4,7 @@ ext {
 
     verMajor = 1
     verMinor = 0
-    verPatch = 4
+    verPatch = 5
 
     bintray = [
             artifactId    : 'floatingedittext',
