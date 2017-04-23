@@ -1,10 +1,8 @@
 package com.rafakob.floatingedittext;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.support.design.widget.TextInputEditText;
@@ -28,7 +26,6 @@ public class FloatingEditText extends TextInputLayout {
         setup(context, attrs, 0);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public FloatingEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         setup(context, attrs, defStyleAttr);
