@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 ext {
-    bintrayRepo = 'FloatingEditText'
+    bintrayRepo = 'maven'
     bintrayName = 'FloatingEditText'
 
     publishedGroupId = 'com.rafakob'
     libraryName = 'FloatingEditText'
-    artifact = 'FloatingEditText'
+    artifact = 'floatingedittext'
 
     libraryDescription = 'TextInputLayout and TextInputEditText merged into one class'
 
